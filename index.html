@@ -15,6 +15,11 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '457487226047801');
     fbq('track', 'PageView');
+
+
+    function sendEvent() {
+      fbq('trackCustom', 'ShareDiscount', {promotion: 'share_discount_10%'});
+    }
   </script>
   <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=457487226047801&ev=PageView&noscript=1"
@@ -23,5 +28,6 @@
 </head>
 <body>
     <h1>Pixel CloudBridge Example Website</h1>
+    <button title="Send event" onclick="sendEvent()"></button>
 </body>
 </html>
